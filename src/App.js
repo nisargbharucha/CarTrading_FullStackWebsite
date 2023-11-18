@@ -7,10 +7,15 @@ import Types from './Types';
 import Listings from './Listings';
 import Details from './Details';
 import Login from './Login';
+import Register from './Register';
 import backgroundImage from './assets/back.png';
 import './styles/index.css'; 
 import Header from './Header';
-
+document.addEventListener('DOMContentLoaded', (event) => {
+  if (window.location.pathname === '') {
+      document.getElementById('pageBody').style.background = "url(./assets/index.css) no-repeat center center fixed";
+  }
+});
 function App() {
   return (
     <Router>
@@ -22,6 +27,7 @@ function App() {
           <Route path="/listings" component={Listings} />
           <Route path="/details" component={Details} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
         </Switch>
       </div>
     </Router>

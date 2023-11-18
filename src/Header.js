@@ -6,10 +6,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Types', href: '#', current: false },
-  { name: 'Listings', href: '#', current: false },
-  { name: '', href: '#', current: false },
+  { name: 'Dashboard', href: '/', current: false },
+  { name: 'Types', href: '/Types', current: false },
+  { name: 'Listings', href: '/Listings', current: false },
+  
 ]
 
 function classNames(...classes) {
@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -89,6 +89,16 @@ function Header() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="Login"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Login
+                          </a>
+                        )}
+                      </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a

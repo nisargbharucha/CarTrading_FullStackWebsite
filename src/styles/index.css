@@ -4,12 +4,13 @@
 @import 'tailwindcss/utilities';
 
 
-body {
-    background-image: url(../assets/back.png);
+body{
+    /* background-image: url(../assets/back.png); */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Fixed background */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color with opacity */
+    background-color: rgba(0, 0, 0, 100); /* Background color with opacity */
+    overflow: hidden; /* Hide scrollbars */
   }
   

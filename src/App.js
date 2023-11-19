@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from './main';
@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 function App() {
   return (
+    useEffect(() => {
+      // Set 'login' local storage variable to false if it's not already set
+      if (localStorage.getItem('login') === null) {
+        localStorage.setItem('login', 'false');
+      }
+    }, []),
     <Router>
       <div>
         <Header/>

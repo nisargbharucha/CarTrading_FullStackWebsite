@@ -11,6 +11,7 @@ import Register from './Register';
 import backgroundImage from './assets/back.png';
 import './styles/index.css'; 
 import Header from './Header';
+import Sell from './Sell.js';
 document.addEventListener('DOMContentLoaded', (event) => {
   if (window.location.pathname === '') {
       document.getElementById('pageBody').style.background = "url(./assets/index.css) no-repeat center center fixed";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/details" component={Details} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/sell" component={Sell}/>
         </Switch>
       </div>
     </Router>

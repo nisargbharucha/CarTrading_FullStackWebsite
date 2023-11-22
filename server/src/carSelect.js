@@ -47,13 +47,40 @@ carSelectRouter.post('/sell', async (req, res) => {
 
 carSelectRouter.get('/details/:carId', async (req, res) => {
   const carId = req.params.carId;
-  console.log(carId);
   try {
     const [results] = await connection.query(`
-      SELECT * FROM listings JOIN car ON listings.carId = car.carId JOIN images ON car.carId = images.carId WHERE car.carId = ?`, [carId]);
+      SELECT listings.*, car.*, images.*, users.firstname, users.lastname, users.email 
+      FROM listings 
+      JOIN car ON listings.carId = car.carId 
+      JOIN images ON car.carId = images.carId 
+      JOIN users ON listings.userId = users.userId
+      WHERE car.carId = ?`, [carId]);
     res.json(results);
   } catch (err) {
     console.error('Error fetching car data:', err);
+    res.status(500).send('Server error');
+  }
+});
+
+
+carSelectRouter.get('/reviews/:listingId', async (req, res) => {
+  const { listingId } = req.params;
+  console.log(`Fetching reviews for listingId: ${listingId}`);
+  try {
+    const [reviews] = await connection.query(`
+      SELECT reviews.*, users.firstname, users.lastname 
+      FROM reviews 
+      JOIN users ON reviews.reviewerId = users.userId 
+      WHERE reviews.listingId = ?
+    `, [listingId]);
+
+    if (reviews.length > 0) {
+      res.json(reviews);
+    } else {
+      res.status(404).send('No reviews found for the specified listingId.');
+    }
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
     res.status(500).send('Server error');
   }
 });

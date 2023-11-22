@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 import router from './users.js';
 import carSelectRouter from './carSelect.js'; 
 import cors from 'cors';
+import userList from './userList.js';
 const app = express();
 
 app.use(express.json());
@@ -20,5 +21,5 @@ app.listen(port, () => {
 });
 
 app.use('/select', carSelectRouter);
-
+app.use('/profile', userList);
 app.use("/users", router);

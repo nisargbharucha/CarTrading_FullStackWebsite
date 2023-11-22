@@ -11,7 +11,7 @@ function Main() {
             Sell
           </a>
           <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">
-            Buy
+            Browse Inventory
           </button>
         </div>
       </div>

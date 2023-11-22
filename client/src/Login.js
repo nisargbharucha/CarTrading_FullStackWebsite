@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 function Login() {
+  const history = useHistory();
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -15,8 +17,11 @@ function Login() {
             username,
             password
           });
-    
+
+          localStorage.setItem('login', true);
           console.log('Login successful:', response.data);
+          localStorage.setItem('userId', response.data.userId);
+          history.push('/Types');
           // Handle successful login here (e.g., store token, redirect)
         } catch (error) {
           console.error('Login error:', error.response ? error.response.data : error.message);

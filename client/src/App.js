@@ -1,5 +1,5 @@
 // src/App.js
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from './main';
@@ -9,13 +9,17 @@ import Details from './Details';
 import Login from './Login';
 import Register from './Register';
 import backgroundImage from './assets/back.png';
-import './styles/index.css'; 
+import './styles/index.css';
 import Header from './Header';
 import Sell from './Sell.js';
+import Profile from './Profile.js'; // Updated import statement
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
   if (window.location.pathname === '') {
       document.getElementById('pageBody').style.background = "url(./assets/index.css) no-repeat center center fixed";
   }
+
 });
 function App() {
   return (
@@ -31,11 +35,12 @@ function App() {
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/types" component={Types} />
-          <Route path="/listings" component={Listings} />
-          <Route path="/details" component={Details} />
+          <Route path="/details/:carId" component={Details} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/sell" component={Sell}/>
+          <Route path="/Listings/:carType" component={Listings} />
+          <Route path="/profile/:userId" component={Profile} />
         </Switch>
       </div>
     </Router>

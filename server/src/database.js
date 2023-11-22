@@ -6,8 +6,8 @@ dotenv.config();
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root', 
-  password: process.env.DBPass, 
-  database: 'dbfinal'
+  password: 'admin', 
+  database: 'finalproject'
 }).promise();
   
  // Connect to the database

@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import car from './assets/car.png'
 const navigation = [
   { name: 'Dashboard', href: '/', current: false },
   { name: 'Types', href: '/Types', current: false },
@@ -15,10 +15,28 @@ const navigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
+function handleSignOut() {
+  localStorage.setItem('userId', '-1');
+  localStorage.setItem('login', 'false');
+}
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  function getUserId() {
+    // Check if the user is logged in
+    const isLoggedIn = localStorage.getItem('login') === 'true';
 
+    if (isLoggedIn) {
+        // Get the user ID from local storage
+        const userId = localStorage.getItem('userId');
+        return userId;
+    } else {
+        // Return null or any appropriate value if the user is not logged in
+        return null;
+    }
+}
+
+const userId = getUserId();
+console.log('User ID:', userId);
   useEffect(() => {
     // Check the 'login' local storage variable and parse it as a boolean
     const loginStatus = localStorage.getItem('login') === 'true';
@@ -46,7 +64,7 @@ function Header() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src={car}
                     alt="Your Company"
                   />
                 </div>
@@ -57,7 +75,7 @@ function Header() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -82,7 +100,10 @@ function Header() {
                       >
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+
                       </button>
                     </Menu.Button>
                   </div>
@@ -100,7 +121,7 @@ function Header() {
         <Menu.Item>
           {({ active }) => (
             <a
-              href="Login"
+              href="http://localhost:3000/Login"
               className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
             >
               Login
@@ -112,22 +133,22 @@ function Header() {
         <>
           <Menu.Item>
             {({ active }) => (
-              <a
-                href="#"
+              <Link
+                to={`/profile/${userId}`}
                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
               >
                 Your Profile
-              </a>
+              </Link>
             )}
           </Menu.Item>
           <Menu.Item>
             {({ active }) => (
-              <a
-                href="#"
+              <Link
+                to="/login" onClick={handleSignOut}
                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
               >
                 Sign out
-              </a>
+              </Link>
             )}
           </Menu.Item>
         </>

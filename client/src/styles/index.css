@@ -10,7 +10,11 @@ body{
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Fixed background */
-    background-color: rgba(0, 0, 0, 100); /* Background color with opacity */
-    overflow: hidden; /* Hide scrollbars */
+    background-color: #111827; /* Background color with opacity */
+    overflow: auto; /* Hide scrollbars */
   }
-  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+        overflow: hidden; /* Example for mobile devices */
+    }
+}

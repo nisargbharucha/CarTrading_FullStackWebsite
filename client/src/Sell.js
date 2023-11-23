@@ -91,14 +91,14 @@ function Sell() {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen">
-            <form className="w-full max-w-lg bg-white rounded-lg shadow-md p-6" onSubmit={handleSubmit}>
-            <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">List Your Car</h2>
+        <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
+            <form className="w-full max-w-lg bg-gray-900 rounded-lg shadow-md p-6 my-6" onSubmit={handleSubmit}>
+            <h2 className="text-xl font-semibold text-white mb-6 text-center">List Your Car</h2>
                 <div className="sm:col-span-6">
                     <div className="flex flex-wrap -mx-2 mb-4">
                         <div className="w-1/2 px-2">
                         <div className="mb-4">
-                        <label htmlFor="carMake" className="text-black text-center block text-sm font-medium leading-6 ">
+                        <label htmlFor="carMake" className="text-white text-center block text-sm font-medium leading-6 ">
                             Car Make
                         </label>
                         <input
@@ -106,7 +106,7 @@ function Sell() {
                             name="carMake"
                             id="carMake"
                             autoComplete=""
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md bg-gray-100 border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             placeholder="Toyota"
                             value={carMake}
                             onChange={handleInputChange}
@@ -114,7 +114,7 @@ function Sell() {
                         </div>
                         </div>
                         <div className="w-1/2 px-2">
-                        <label htmlFor="carModel" className="text-center block text-sm font-medium leading-6 text-black">
+                        <label htmlFor="carModel" className="text-center block text-sm font-medium leading-6 text-white">
                             Car Model
                         </label>
                         <input
@@ -122,7 +122,7 @@ function Sell() {
                             name="carModel"
                             id="carModel"
                             autoComplete=""
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             placeholder="Corolla"
                             value={carModel}
                             onChange={handleInputChange}
@@ -130,13 +130,13 @@ function Sell() {
                         </div>
                     </div>
 
-                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-white">
                         Car Type
                     </label>
                     <select
                         id="carType"
                         name="carType"
-                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         value={carType}
                         onChange={handleInputChange}
                     >
@@ -147,22 +147,22 @@ function Sell() {
                     </select>
                     
                 
-                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-white">
                         Car Description
                     </label>                
-                    <textarea id="carDescription" value={carDescription} onChange={handleInputChange} name="carDescription" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-                    <p class="mb-4 text-sm leading-6 text-black">Try to include relevant information about the car only.</p>
+                    <textarea id="carDescription" value={carDescription} onChange={handleInputChange} name="carDescription" rows="3" class="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                    <p class="mb-4 text-sm leading-6 text-white">Try to include relevant information about the car only.</p>
 
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-1/2 px-2 mb-4">
-                        <label htmlFor="carYear" className="text-center block text-sm font-medium leading-6 text-black">
+                        <label htmlFor="carYear" className="text-center block text-sm font-medium leading-6 text-white">
                             Year
                         </label>
                         <input
                             type="number"
                             id="carYear"
                             name="carYear"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             inputMode="numeric"
                             defaultValue="2000"
                             value={carYear}
@@ -170,14 +170,14 @@ function Sell() {
                         />
                         </div>
                         <div className="w-1/2 px-2 mb-4">
-                        <label htmlFor="carOdometer" className="text-center block text-sm font-medium leading-6 text-black">
+                        <label htmlFor="carOdometer" className="text-center block text-sm font-medium leading-6 text-white">
                             Odometer
                         </label>
                         <input
                             type="number"
                             id="carOdometer"
                             name="carOdometer"
-                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             inputMode="numeric"
                             defaultValue="100000"
                             value={carOdometer}
@@ -186,7 +186,7 @@ function Sell() {
                         </div>
                     </div>
                 
-                    <label htmlFor="carCondition" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carCondition" className="text-center block text-sm font-medium leading-6 text-white">
                         Condition
                     </label>
                     <input
@@ -194,13 +194,13 @@ function Sell() {
                         name="carCondition"
                         id="carCondition"
                         autoComplete=""
-                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder=""
                         value={carCondition}
                         onChange={handleInputChange}
                     />
 
-                    <label htmlFor="carPrice" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carPrice" className="text-center block text-sm font-medium leading-6 text-white">
                         Price
                     </label>
 
@@ -208,28 +208,28 @@ function Sell() {
                         type="number"
                         id="carPrice"
                         name="carPrice"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         inputMode="numeric"
                         value={carPrice}
                         onChange={handleInputChange}
                     />
-                    <p class="mb-4 text-sm leading-6 text-black">This price can be negotiated with the buyer.</p>
+                    <p class="mb-4 text-sm leading-6 text-white">This price can be negotiated with the buyer.</p>
 
-                    <label htmlFor="carLocation" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carLocation" className="text-center block text-sm font-medium leading-6 text-white">
                         Location
                     </label>
                     <input
                         type="text"
                         name="carLocation"
                         id="carLocation"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="Toronto"
                         value={carLocation}
                         onChange={handleInputChange}
                     />
-                    <p class="mb-4 text-sm leading-6 text-black">Use a location where you can do a tradeoff with the buyer.</p>
+                    <p class="mb-4 text-sm leading-6 text-white">Use a location where you can do a tradeoff with the buyer.</p>
 
-                    <label htmlFor="carImage" className="text-center block text-sm font-medium leading-6 text-black">
+                    <label htmlFor="carImage" className="text-center block text-sm font-medium leading-6 text-white">
                             Car Image
                     </label>
                     <input
@@ -237,13 +237,13 @@ function Sell() {
                         name="carImage"
                         id="carImage"
                         autoComplete=""
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         placeholder="Image URL"
                         value={carImage}
                         onChange={handleInputChange}
                     />
                     <div className='py-4'></div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-200 font-medium py-2">Submit</button>
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-200 font-medium py-2">Submit</button>
                 </div>
             </form>
         </div>

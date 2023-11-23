@@ -8,9 +8,10 @@ import coupeImage from './assets/coupe.png';
 
 function Types(){
     return(
-        <section className="text-gray-400 body-font bg-gray-900">
-            
-        <div className="container px-5 py-24 mx-auto min-h-screen p-4">
+        <div className="text-gray-400 body-font bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div className="container max-w-none mx-auto min-h-screen p-12">
+          {/* Adjust the padding (p-8, p-12, etc.) and rounded corners (rounded-lg, rounded-xl, etc.) here */}
+          <div className='bg-gray-900 py-25 px-4 md:px-10 lg:px-20 xl:px-40 rounded-xl p-8'>
             <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Choose Your Type</h1>
@@ -60,8 +61,9 @@ function Types(){
                 </Link>
             </div>
             </div>
+            </div>
         </div>
-        </section>
+        </div>
     );
 }
 

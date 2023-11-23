@@ -5,7 +5,7 @@
 
 
 body{
-    background-image: url(../assets/back.png);
+    /*background-image: url(../assets/back.png);
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */

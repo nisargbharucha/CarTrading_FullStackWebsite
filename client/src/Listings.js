@@ -37,7 +37,7 @@ function Listings() {
                             cars.map((car, index) => (
                                 <div class="p-4 md:w-1/3">
                                     <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-white">
-                                        <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog"></img>
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={car.imageUrl} alt="blog"></img>
                                         <div class="p-6">
                                             {/* <h2 class="tracking-widest text-xs title-font font-medium text-black mb-1">CATEGORY - {car.type}</h2> */}
                                             <h1 class="title-font text-lg font-medium text-black mb-3">{car.make} {car.model}</h1>

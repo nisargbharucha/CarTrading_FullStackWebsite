@@ -43,10 +43,10 @@ console.log('User ID:', userId);
     setIsLoggedIn(loginStatus);
   }, []);
   return (
-    <Disclosure as="nav" className="bg-white">
+    <Disclosure as="nav" className="bg-white dark:bg-gray-900">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 dark:bg-gray-900 ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -75,7 +75,7 @@ console.log('User ID:', userId);
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}

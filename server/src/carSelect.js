@@ -7,7 +7,11 @@ carSelectRouter.get('/cars/:type', async (req, res) => {
   const carType = req.params.type;
   
   try {
-    const [cars] = await connection.query('SELECT * FROM car WHERE type = ?', [carType]);
+    const [cars] = await connection.query(`
+      SELECT car.*, images.filename, images.description, images.imageUrl
+      FROM car
+      JOIN images ON car.carId = images.carId
+      WHERE car.type = ?`, [carType]);
     res.json(cars);
   } catch (err) {
     console.error(err);

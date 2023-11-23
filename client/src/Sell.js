@@ -91,12 +91,14 @@ function Sell() {
     };
 
     return (
-        <div className="flex justify-center">
-            <form className="w-full max-w-md" onSubmit={handleSubmit}>
+        <div className="flex justify-center items-center min-h-screen">
+            <form className="w-full max-w-lg bg-white rounded-lg shadow-md p-6" onSubmit={handleSubmit}>
+            <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">List Your Car</h2>
                 <div className="sm:col-span-6">
                     <div className="flex flex-wrap -mx-2 mb-4">
                         <div className="w-1/2 px-2">
-                        <label htmlFor="carMake" className="text-center block text-sm font-medium leading-6 text-white">
+                        <div className="mb-4">
+                        <label htmlFor="carMake" className="text-black text-center block text-sm font-medium leading-6 ">
                             Car Make
                         </label>
                         <input
@@ -110,8 +112,9 @@ function Sell() {
                             onChange={handleInputChange}
                         />
                         </div>
+                        </div>
                         <div className="w-1/2 px-2">
-                        <label htmlFor="carModel" className="text-center block text-sm font-medium leading-6 text-white">
+                        <label htmlFor="carModel" className="text-center block text-sm font-medium leading-6 text-black">
                             Car Model
                         </label>
                         <input
@@ -127,7 +130,7 @@ function Sell() {
                         </div>
                     </div>
 
-                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-black">
                         Car Type
                     </label>
                     <select
@@ -144,15 +147,15 @@ function Sell() {
                     </select>
                     
                 
-                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-black">
                         Car Description
                     </label>                
                     <textarea id="carDescription" value={carDescription} onChange={handleInputChange} name="carDescription" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-                    <p class="mb-4 text-sm leading-6 text-white">Try to include relevant information about the car only.</p>
+                    <p class="mb-4 text-sm leading-6 text-black">Try to include relevant information about the car only.</p>
 
                     <div className="flex flex-wrap -mx-2">
                         <div className="w-1/2 px-2 mb-4">
-                        <label htmlFor="carYear" className="text-center block text-sm font-medium leading-6 text-white">
+                        <label htmlFor="carYear" className="text-center block text-sm font-medium leading-6 text-black">
                             Year
                         </label>
                         <input
@@ -167,7 +170,7 @@ function Sell() {
                         />
                         </div>
                         <div className="w-1/2 px-2 mb-4">
-                        <label htmlFor="carOdometer" className="text-center block text-sm font-medium leading-6 text-white">
+                        <label htmlFor="carOdometer" className="text-center block text-sm font-medium leading-6 text-black">
                             Odometer
                         </label>
                         <input
@@ -183,7 +186,7 @@ function Sell() {
                         </div>
                     </div>
                 
-                    <label htmlFor="carCondition" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carCondition" className="text-center block text-sm font-medium leading-6 text-black">
                         Condition
                     </label>
                     <input
@@ -197,7 +200,7 @@ function Sell() {
                         onChange={handleInputChange}
                     />
 
-                    <label htmlFor="carPrice" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carPrice" className="text-center block text-sm font-medium leading-6 text-black">
                         Price
                     </label>
 
@@ -210,9 +213,9 @@ function Sell() {
                         value={carPrice}
                         onChange={handleInputChange}
                     />
-                    <p class="mb-4 text-sm leading-6 text-white">This price can be negotiated with the buyer.</p>
+                    <p class="mb-4 text-sm leading-6 text-black">This price can be negotiated with the buyer.</p>
 
-                    <label htmlFor="carLocation" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carLocation" className="text-center block text-sm font-medium leading-6 text-black">
                         Location
                     </label>
                     <input
@@ -224,9 +227,9 @@ function Sell() {
                         value={carLocation}
                         onChange={handleInputChange}
                     />
-                    <p class="mb-4 text-sm leading-6 text-white">Use a location where you can do a tradeoff with the buyer.</p>
+                    <p class="mb-4 text-sm leading-6 text-black">Use a location where you can do a tradeoff with the buyer.</p>
 
-                    <label htmlFor="carImage" className="text-center block text-sm font-medium leading-6 text-white">
+                    <label htmlFor="carImage" className="text-center block text-sm font-medium leading-6 text-black">
                             Car Image
                     </label>
                     <input
@@ -239,8 +242,8 @@ function Sell() {
                         value={carImage}
                         onChange={handleInputChange}
                     />
-
-                    <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Submit</button>
+                    <div className='py-4'></div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-200 font-medium py-2">Submit</button>
                 </div>
             </form>
         </div>

@@ -24,10 +24,10 @@ function Listings() {
     // In your render
     console.log('Current cars state:', cars);
     return (
-            <section class="text-gray-600 body-font bg-gray-900 h-screen">
+            <section class="text-gray-600 body-font bg-gradient-to-r from-cyan-500 to-blue-500">
                 
-                <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-wrap -m-4">
+                <div class="container py-12 mx-auto ">
+                    <div class="flex flex-wrap -mx-20 bg-gray-900 rounded-xl p-8">
                     <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
                         <h1 class="sm:text-6xl text-2xl font-medium title-font mb-2 text-white">{carType.toUpperCase()}</h1>
                         <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>

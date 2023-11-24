@@ -36,10 +36,11 @@ function Details() {
     return <div>Loading...</div>; // Or any other loading state representation
   }
     return(
-        <section class="text-white body-font bg-gray-900">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <section class="text-white body-font bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div class="pt-12">
+          <div class="container mx-auto flex rounded-lg p-12 md:flex-row flex-col items-center bg-gray-900">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <img class="object-cover object-center rounded" alt="hero" src={ `${car.imageUrl}`}></img>
+            <img class="object-cover object-center rounded" alt="hero" src={ `${car.imageURL}`}></img>
             </div>
             <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">{car.year} {car.make} {car.model}
@@ -70,6 +71,7 @@ function Details() {
             </div>
             </div>
         </div>
+        </div>
 
 
 
@@ -77,7 +79,7 @@ function Details() {
 
 
 
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="container mx-auto flex p-12 pb-8 md:flex-row flex-col items-center bg-gray-900 mt-12 flex rounded-lg">
         <div class="flex flex-col items-left justify-center h-screen text-gray-800 px-5 py-11">
           {/* <!-- Component Start --> */}
           <div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">

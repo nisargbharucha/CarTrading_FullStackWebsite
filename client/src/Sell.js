@@ -106,7 +106,7 @@ function Sell() {
                             name="carMake"
                             id="carMake"
                             autoComplete=""
-                            className="block w-full rounded-md bg-gray-100 border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Toyota"
                             value={carMake}
                             onChange={handleInputChange}
@@ -122,7 +122,7 @@ function Sell() {
                             name="carModel"
                             id="carModel"
                             autoComplete=""
-                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Corolla"
                             value={carModel}
                             onChange={handleInputChange}
@@ -136,7 +136,7 @@ function Sell() {
                     <select
                         id="carType"
                         name="carType"
-                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                         value={carType}
                         onChange={handleInputChange}
                     >
@@ -150,7 +150,7 @@ function Sell() {
                     <label htmlFor="carType" className="text-center block text-sm font-medium leading-6 text-white">
                         Car Description
                     </label>                
-                    <textarea id="carDescription" value={carDescription} onChange={handleInputChange} name="carDescription" rows="3" class="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                    <textarea id="carDescription" value={carDescription} onChange={handleInputChange} name="carDescription" rows="3" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"></textarea>
                     <p class="mb-4 text-sm leading-6 text-white">Try to include relevant information about the car only.</p>
 
                     <div className="flex flex-wrap -mx-2">
@@ -162,7 +162,7 @@ function Sell() {
                             type="number"
                             id="carYear"
                             name="carYear"
-                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                             inputMode="numeric"
                             defaultValue="2000"
                             value={carYear}
@@ -177,7 +177,7 @@ function Sell() {
                             type="number"
                             id="carOdometer"
                             name="carOdometer"
-                            className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                             inputMode="numeric"
                             defaultValue="100000"
                             value={carOdometer}
@@ -194,7 +194,7 @@ function Sell() {
                         name="carCondition"
                         id="carCondition"
                         autoComplete=""
-                        className="mb-4 block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                         placeholder=""
                         value={carCondition}
                         onChange={handleInputChange}
@@ -208,7 +208,7 @@ function Sell() {
                         type="number"
                         id="carPrice"
                         name="carPrice"
-                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                         inputMode="numeric"
                         value={carPrice}
                         onChange={handleInputChange}
@@ -222,7 +222,7 @@ function Sell() {
                         type="text"
                         name="carLocation"
                         id="carLocation"
-                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Toronto"
                         value={carLocation}
                         onChange={handleInputChange}
@@ -237,7 +237,7 @@ function Sell() {
                         name="carImage"
                         id="carImage"
                         autoComplete=""
-                        className="block w-full rounded-md border-0 py-1.5 text-whiteshadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Image URL"
                         value={carImage}
                         onChange={handleInputChange}

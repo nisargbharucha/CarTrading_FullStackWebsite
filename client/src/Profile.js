@@ -23,11 +23,11 @@ function Profile() {
 
     // In your render
     return (
-        <section className="text-gray-600 body-font bg-gray-900 h-screen">
-            <div className="container px-5 py-24 mx-auto">
-                <div className="flex flex-wrap -m-4">
-                    <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-                        <h1 className="sm:text-6xl text-2xl font-medium title-font mb-2 text-white">Your Listings</h1>
+        <section className="text-gray-600 body-font bg-gradient-to-r from-cyan-500 to-blue-500 h-screen">
+            <div className="container px-5 py-12 mx-auto">
+                <div className="flex flex-wrap -mx-24 pb-24 bg-gray-900 rounded-xl p-8">
+                    <div className="flex flex-wrap w-full mb-12 flex-col items-center text-center">
+                        <h1 className="sm:text-5xl text-2xl font-medium title-font mb-2 text-white">Your Listings</h1>
                         <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                     </div>
                     {cars.length > 0 ? (
